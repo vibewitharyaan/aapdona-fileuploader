@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6e8c8">
+<title>AAP DO NA</title>
+<link rel="icon" href="/static/favicon.png" type="image/png">
+<link rel="stylesheet" href="/static/style.css?v=3">
+</head>
+<body>
+<div class="shapes" aria-hidden="true">
+  <i class="sq sq1"></i><i class="sq sq2"></i><i class="sq sq3"></i>
+  <i class="sq sq4"></i><i class="squig squig1"></i><i class="dot dot1"></i>
+  <i class="dot dot2"></i><i class="ring ring1"></i>
+</div>
+<main class="wrap">
+<section class="card">
+  <header class="brand">
+    <img class="logo" src="/static/logo.png" alt="AAP DO NA logo">
+    <div>
+      <h1>AAP DO NA</h1>
+      <p class="sub">Built out of boredom, mostly for my own file drops</p>
+    </div>
+  </header>
+  <div id="banner" class="banner hidden" role="status"></div>
+
+  <div class="field">
+    <label for="key">Upload key</label>
+    <input id="key" type="password" placeholder="enter the password, no jokes (required)">
+  </div>
+
+  <div class="field">
+    <span class="lbl">Lifetime, how long should the file live?</span>
+    <div id="life" class="tabs" role="tablist">
+      <button data-life="5m" type="button" role="tab">5m</button>
+      <button data-life="30m" type="button" role="tab" class="on">30m</button>
+      <button data-life="1h" type="button" role="tab">1h</button>
+      <button data-life="6h" type="button" role="tab">6h</button>
+      <button data-life="1d" type="button" role="tab">1d</button>
+      <button data-life="3d" type="button" role="tab">3d</button>
+      <button data-life="once" type="button" role="tab">once</button>
+    </div>
+  </div>
+
+  <div class="field">
+    <span class="lbl">Storage limit</span>
+    <div class="gauge" id="gauge" title="Upload storage"></div>
+    <p class="gstat" id="gstat">loading…</p>
+  </div>
+
+  <div id="drop" class="drop" role="button" tabindex="0" aria-label="Upload a file">
+    <p>Slap your file down here</p>
+    <button id="pick" type="button">browse files</button>
+    <input id="file" type="file" class="hidden">
+    <div id="name"></div>
+    <div class="bar hidden" id="bar"><div id="fill"></div></div>
+    <div id="pct" class="hidden"></div>
+    <button id="cancel" type="button" class="hidden">Cancel</button>
+  </div>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <div id="done" class="hidden">
+    <p>Link ready! <code id="fname"></code></p>
+    <input id="url" readonly>
+    <button id="copy" type="button">COPY</button>
+  </div>
+</section>
+<footer class="footer">
+  <p class="disc">Side project, for personal use only</p>
+  <a class="src" href="https://github.com/vibewitharyaan/aapdona-fileuploader" target="_blank" rel="noopener" aria-label="Source code on GitHub">
+    <img src="/static/github-svgrepo-com.svg" alt="" width="14" height="14"> Source code
+  </a>
+</footer>
+</main>
+<script src="/static/app.js?v=7" defer></script>
+</body>
+</html>

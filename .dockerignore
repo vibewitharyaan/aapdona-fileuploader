@@ -1,0 +1,10 @@
+uploads/
+docs/
+tests/
+__pycache__/
+*.pyc
+Dockerfile
+docker-compose.yml
+uploader.conf
+*.md
+.env

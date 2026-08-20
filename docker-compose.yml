@@ -1,0 +1,13 @@
+services:
+  uploader:
+    build: .
+    image: my-apps-uploader:latest
+    container_name: my-apps-uploader
+    restart: unless-stopped
+    user: "1001:1001"
+    network_mode: host
+    environment:
+      - UPLOAD_PASSWORD=${UPLOAD_PASSWORD:?set UPLOAD_PASSWORD in .env}
+      - UPLOAD_HOST=127.0.0.1
+    volumes:
+      - ./uploads:/app/uploads

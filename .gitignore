@@ -1,0 +1,8 @@
+docs/
+uploads/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+uploader.log
